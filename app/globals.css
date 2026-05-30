@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1B2A4A;
+  --navy-dark: #111D35;
+  --accent: #2563EB;
+  --accent-light: #EBF4FF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Meiryo', sans-serif;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-accent text-white font-semibold rounded-md hover:bg-accent-dark transition-colors duration-200 text-base;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-navy transition-colors duration-200 text-base;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-accent text-accent font-semibold rounded-md hover:bg-accent hover:text-white transition-colors duration-200 text-base;
+  }
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-navy mb-4;
+  }
+  .section-sub {
+    @apply text-slate-500 text-lg max-w-2xl mx-auto;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-100 p-6 hover:shadow-md transition-shadow duration-200;
+  }
+}
